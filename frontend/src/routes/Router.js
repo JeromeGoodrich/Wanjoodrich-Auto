@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
@@ -32,11 +32,13 @@ import SprkTextDocs from './SprkTextDocs/SprkTextDocs';
 import SprkBoxDocs from './SprkBoxDocs/SprkBoxDocs';
 import SprkCenteredColumnDocs from './SprkCenteredColumnDocs/SprkCenteredColumnDocs';
 import NotFound from './NotFound/NotFound';
+import Maison from './Maison/Maison';
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Homepage} />
+      <Route exact path="/" component={Maison} />
+      <Route exact path="/homepage" component={Homepage} />
       <Route exact path="/alert" component={SprkAlertDocs} />
       <Route exact path="/button" component={SprkButtonDocs} />
       <Route exact path="/card" component={SprkCardDocs} />
@@ -48,8 +50,16 @@ const Router = () => (
       <Route path="/input" component={SprkInputDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
       <Route exact path="/table" component={SprkTableDocs} />
-      <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
-      <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
+      <Route
+        exact
+        path="/masthead-default"
+        component={SprkMastheadDefaultDocs}
+      />
+      <Route
+        exact
+        path="/masthead-extended"
+        component={SprkMastheadExtendedDocs}
+      />
       <Route exact path="/pagination" component={SprkPaginationDocs} />
       <Route exact path="/promos" component={SprkPromoDocs} />
       <Route exact path="/tabs" component={SprkTabsDocs} />
